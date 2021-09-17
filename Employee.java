@@ -1,34 +1,30 @@
 package employee;
+import java.util.Random;
 
 public class Employee {
-
+	
 
 	public static void main(String[] args) {
 
+		Random rand = new Random();
 
+		int empCheck = rand.nextInt(2);
 
-			System.out.println("Welcome to Employee Wage Computation Program");
+		System.out.println(empCheck);
 
-			int WAGE_HOURS = 20;
-			int DAILY_HOURS = 8;
-			int PART_TIME_HOURS = 4;
+		switch (empCheck) {
 
-			int PART_TIME_HOURSS = WAGE_HOURS * PART_TIME_HOURS;
-			int FULL_TIME_HOURS = WAGE_HOURS * DAILY_HOURS;
+		case 0:
 
-			double empCheck = Math.floor(Math.random() * 10) % 2;
+			System.out.println("Employee is present");
+			break;
 
-			System.out.println(empCheck);
+		default:
 
-			if (empCheck == 1) {
+			System.out.println("Employee is Absent");
 
-				System.out.println("Employee is Full  time: " + FULL_TIME_HOURS);
-			}
-
-			else {
-
-				System.out.println("Employee is Part time :" + PART_TIME_HOURSS);
-			}
+		}
 
 	}
+
 }
